@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="VIDAFARMA: catálogo de cuidado personal, higiene y primeros auxilios.">
+        <title>Preguntas frecuentes | VIDAFARMA</title>
+        <link rel="icon" href="assets/img/logo.webp" type="image/webp">
+        <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/estilos.css">
+        <!-- JavaScript: funciones generales, catálogo y carrito -->
+        <script src="assets/js/principal.js" defer></script>
+        <script src="assets/js/productos.js" defer></script>
+        <script src="assets/js/carrito.js" defer></script>
+    </head>
+    <body>
+        <a class="saltar" href="#contenido">Saltar al contenido</a>
+        <div class="barra-superior">
+            Tu bienestar, más cerca
+            <span>Cuidado personal · Higiene · Bienestar</span>
+        </div>
+        <!-- Encabezado y navegación -->
+        <header>
+            <nav class="container navegacion" aria-label="Navegación principal">
+                <a class="marca" href="index.html">
+                    <img src="assets/img/logo.webp" alt="VIDAFARMA" class="logo" width="379" height="358">
+                </a>
+                <button id="boton-menu" class="boton-menu" aria-expanded="false" aria-controls="menu">Menú ☰</button>
+                <ul id="menu" class="menu">
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li class="con-submenu">
+                        <a href="productos.html">Productos</a>
+                        <button class="abrir-submenu" aria-label="Mostrar categorías" aria-expanded="false" aria-controls="submenu">⌄</button>
+                        <ul id="submenu" class="submenu">
+                            <li>
+                                <a href="productos.html#cuidado">Cuidado personal</a>
+                            </li>
+                            <li>
+                                <a href="productos.html#higiene">Higiene</a>
+                            </li>
+                            <li>
+                                <a href="productos.html#auxilios">Primeros auxilios</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="preguntas.html" aria-current="page">Preguntas frecuentes</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="carrito.html" class="enlace-carrito">Carrito (<span class="cantidad-carrito">0</span>)</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Contenido de la página -->
+        <main id="contenido">
+            <section class="container cabecera">
+                <p class="etiqueta">ESTAMOS PARA AYUDARTE</p>
+                <h1>Resolvemos tus dudas.</h1>
+                <p>Lo que necesitas saber antes de explorar VIDAFARMA.</p>
+            </section>
+            <section class="container seccion pt-0">
+                <div class="row gy-5 gx-4">
+                    <div class="col-lg-8">
+                        <details class="pregunta">
+                            <summary>¿Cómo agrego productos al carrito?</summary>
+                            <p>Busca un producto y pulsa Agregar al carrito. Puedes añadir varios artículos y cambiar sus cantidades desde el carrito.</p>
+                        </details>
+                        <details class="pregunta">
+                            <summary>¿En qué moneda están los precios?</summary>
+                            <p>Los precios se muestran en soles. El total se calcula según los productos y cantidades de tu carrito.</p>
+                        </details>
+                        <details class="pregunta">
+                            <summary>¿Cuál es el horario de atención?</summary>
+                            <p>De lunes a sábado, de 8:00 a. m. a 9:00 p. m.</p>
+                        </details>
+                        <details class="pregunta">
+                            <summary>¿Cómo encuentro un producto?</summary>
+                            <p>En Productos puedes escribir su nombre y elegir una categoría. Usa Limpiar filtros para volver a ver todo el catálogo.</p>
+                        </details>
+                        <details class="pregunta">
+                            <summary>¿Cómo conservo mi consulta?</summary>
+                            <p>Completa el formulario de Contacto y pulsa Descargar consulta para guardar un archivo con tu mensaje.</p>
+                        </details>
+                        <details class="pregunta">
+                            <summary>¿Puedo solicitar orientación sobre medicamentos?</summary>
+                            <p>Consulta a un profesional farmacéutico. Nuestro catálogo incluye productos de cuidado personal, higiene y primeros auxilios.</p>
+                        </details>
+                    </div>
+                    <aside class="col-lg-4">
+                        <div class="ayuda">
+                            <h2>¿Tienes otra consulta?</h2>
+                            <p>Prepara una consulta con tus dudas y los datos de contacto.</p>
+                            <a class="btn btn-primary" href="contacto.html">Ir a contacto →</a>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+        </main>
+        <!-- Pie de página -->
+        <footer>
+            <div class="container row mx-auto gy-4">
+                <div class="col-md-5">
+                    <a class="marca" href="index.html">+ VIDAFARMA.</a>
+                    <p>Cuidado cotidiano, información a tu alcance.</p>
+                    <small>Todos los precios están expresados en soles.</small>
+                </div>
+                <div class="col-md-3">
+                    <h2>Explora</h2>
+                    <a href="productos.html">Nuestros productos</a>
+                    <a href="nosotros.html">Sobre nosotros</a>
+                    <a href="preguntas.html">Resuelve tus dudas</a>
+                </div>
+                <div class="col-md-4">
+                    <h2>Estamos para orientarte</h2>
+                    <p>Lunes a sábado · 8:00 a. m. a 9:00 p. m.</p>
+                    <a href="contacto.html">Ir a contacto →</a>
+                </div>
+            </div>
+            <div class="container cierre">© 2026 VIDAFARMA · Cuidado y bienestar</div>
+        </footer>
+        <div id="aviso-carrito" class="aviso-carrito" role="status" aria-live="polite"></div>
+    </body>
+</html>
