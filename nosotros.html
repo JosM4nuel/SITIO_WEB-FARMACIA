@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="VIDAFARMA: catálogo de cuidado personal, higiene y primeros auxilios.">
+        <title>Nosotros | VIDAFARMA</title>
+        <link rel="icon" href="assets/img/logo.webp" type="image/webp">
+        <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/estilos.css">
+        <!-- JavaScript: funciones generales, catálogo y carrito -->
+        <script src="assets/js/principal.js" defer></script>
+        <script src="assets/js/productos.js" defer></script>
+        <script src="assets/js/carrito.js" defer></script>
+    </head>
+    <body>
+        <a class="saltar" href="#contenido">Saltar al contenido</a>
+        <div class="barra-superior">
+            Tu bienestar, más cerca
+            <span>Cuidado personal · Higiene · Bienestar</span>
+        </div>
+        <!-- Encabezado y navegación -->
+        <header>
+            <nav class="container navegacion" aria-label="Navegación principal">
+                <a class="marca" href="index.html">
+                    <img src="assets/img/logo.webp" alt="VIDAFARMA" class="logo" width="379" height="358">
+                </a>
+                <button id="boton-menu" class="boton-menu" aria-expanded="false" aria-controls="menu">Menú ☰</button>
+                <ul id="menu" class="menu">
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li class="con-submenu">
+                        <a href="productos.html">Productos</a>
+                        <button class="abrir-submenu" aria-label="Mostrar categorías" aria-expanded="false" aria-controls="submenu">⌄</button>
+                        <ul id="submenu" class="submenu">
+                            <li>
+                                <a href="productos.html#cuidado">Cuidado personal</a>
+                            </li>
+                            <li>
+                                <a href="productos.html#higiene">Higiene</a>
+                            </li>
+                            <li>
+                                <a href="productos.html#auxilios">Primeros auxilios</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="nosotros.html" aria-current="page">Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="preguntas.html">Preguntas frecuentes</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="carrito.html" class="enlace-carrito">Carrito (<span class="cantidad-carrito">0</span>)</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Contenido de la página -->
+        <main id="contenido">
+            <section class="container cabecera">
+                <p class="etiqueta">CONÓCENOS</p>
+                <h1>Cerca de ti, cuidando de tu bienestar.</h1>
+                <p>Conoce nuestros productos, consulta nuestros horarios y encuentra la información que necesitas de manera fácil y rápida, desde tu celular o computadora.</p>
+            </section>
+            <section class="container seccion pt-0">
+                <div class="row gy-5 gx-4 align-items-center">
+                    <div class="col-md-6">
+                        <img class="imagen-principal" src="assets/img/farmacia.webp" alt="Fachada de la botica VIDAFARMA" width="1127" height="944">
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Una farmacia cercana, también en internet</h2>
+                        <p>En VIDAFARMA queremos hacerte la vida más sencilla. Por eso, creamos este espacio digital para que conozcas nuestros productos, consultes nuestros horarios y encuentres nuestros canales de atención de forma rápida y cómoda.</p>
+                        <p>Queremos estar más cerca de ti, tanto cuando visitas nuestra farmacia como cuando nos buscas por internet.</p>
+                        <h3>Nuestra misión</h3>
+                        <p>Brindarte información clara y accesible sobre nuestros productos y servicios, facilitando que encuentres lo que necesitas para el cuidado de tu salud y bienestar.</p>
+                        <h3>Nuestra visión</h3>
+                        <p>Ser la farmacia de confianza de nuestra comunidad, reconocida por su cercanía, compromiso con el bienestar de las personas y atención accesible, tanto presencial como digitalmente.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="franja">
+                <div class="container">
+                    <h2>Lo que nos guía</h2>
+                    <div class="row g-4 mt-2">
+                        <article class="col-md-4">
+                            <h3>Claridad</h3>
+                            <p>Categorías, presentaciones y precios fáciles de identificar.</p>
+                        </article>
+                        <article class="col-md-4">
+                            <h3>Cercanía</h3>
+                            <p>Un espacio pensado para las consultas de todos los días.</p>
+                        </article>
+                        <article class="col-md-4">
+                            <h3>Responsabilidad</h3>
+                            <p>La orientación sobre medicamentos corresponde al personal farmacéutico.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Pie de página -->
+        <footer>
+            <div class="container row mx-auto gy-4">
+                <div class="col-md-5">
+                    <a class="marca" href="index.html">
+                        <img class="logo" src="assets/img/logo.webp" alt="VIDAFARMA" width="379" height="358" loading="lazy">
+                    </a>
+                    <p>Cuidado cotidiano, información a tu alcance.</p>
+                    <small>Todos los precios están expresados en soles.</small>
+                </div>
+                <div class="col-md-3">
+                    <h2>Explora</h2>
+                    <a href="productos.html">Nuestros productos</a>
+                    <a href="nosotros.html">Sobre nosotros</a>
+                    <a href="preguntas.html">Resuelve tus dudas</a>
+                </div>
+                <div class="col-md-4">
+                    <h2>Estamos para orientarte</h2>
+                    <p>Lunes a sábado · 8:00 a. m. a 9:00 p. m.</p>
+                    <a href="contacto.html">Ir a contacto →</a>
+                </div>
+            </div>
+            <div class="container cierre">© 2026 VIDAFARMA · Cuidado y bienestar</div>
+        </footer>
+        <div id="aviso-carrito" class="aviso-carrito" role="status" aria-live="polite"></div>
+    </body>
+</html>
