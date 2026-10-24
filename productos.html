@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="VIDAFARMA: catálogo de cuidado personal, higiene y primeros auxilios.">
+        <title>Productos | VIDAFARMA</title>
+        <link rel="icon" href="assets/img/logo.webp" type="image/webp">
+        <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/estilos.css">
+        <!-- JavaScript: funciones generales, catálogo y carrito -->
+        <script src="assets/js/principal.js" defer></script>
+        <script src="assets/js/productos.js" defer></script>
+        <script src="assets/js/carrito.js" defer></script>
+    </head>
+    <body>
+        <a class="saltar" href="#contenido">Saltar al contenido</a>
+        <div class="barra-superior">
+            <div class="mensajes-barra">
+                <a href="https://wa.me/51946817139" target="_blank" rel="noopener">PEDIDOS POR WHATSAPP · 946 817 139</a>
+                <a href="productos.html">COMPRA POR CATEGORÍAS</a>
+                <a href="contacto.html">LUN–SÁB · 8:00 A. M. A 9:00 P. M.</a>
+            </div>
+        </div>
+        <!-- Encabezado y navegación -->
+        <header>
+            <nav class="container navegacion" aria-label="Navegación principal">
+                <a class="marca" href="index.html">
+                    <img src="assets/img/logo.webp" alt="VIDAFARMA" class="logo" width="379" height="358">
+                </a>
+                <button type="button" id="boton-menu" class="boton-menu" aria-expanded="false" aria-controls="menu">Menú ☰</button>
+                <ul id="menu" class="menu">
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="productos.html" aria-current="page">Productos</a>
+                    </li>
+                    <li>
+                        <a href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="preguntas.html">Preguntas frecuentes</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="carrito.html" class="enlace-carrito">Carrito (<span class="cantidad-carrito">0</span>)</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Búsqueda rápida del catálogo -->
+            <div class="container barra-busqueda">
+                <form class="buscar-tienda" action="productos.html" method="get" role="search">
+                    <label class="visually-hidden" for="busqueda-tienda">Buscar en el catálogo</label>
+                    <input id="busqueda-tienda" name="q" type="search" placeholder="¿Qué producto estás buscando?" maxlength="80">
+                    <button type="submit">Buscar</button>
+                </form>
+                <a class="ayuda-tienda" href="preguntas.html">¿Necesitas ayuda? →</a>
+            </div>
+            <nav class="categorias-rapidas" aria-label="Categorías de productos">
+                <div class="container">
+                    <a href="productos.html">Todo el catálogo</a>
+                    <a href="productos.html#cuidado">Cuidado personal</a>
+                    <a href="productos.html#higiene">Higiene</a>
+                    <a href="productos.html#auxilios">Primeros auxilios</a>
+                </div>
+            </nav>
+        </header>
+        <!-- Contenido de la página -->
+        <main id="contenido">
+            <nav class="container ruta" aria-label="Ubicación en el sitio">
+                <a href="index.html">Inicio</a> <span aria-hidden="true">/</span> <span aria-current="page">Productos</span>
+            </nav>
+            <section class="cabecera container">
+                <p class="etiqueta">NUESTRO CATÁLOGO</p>
+                <h1>Esenciales para cuidarte.</h1>
+                <p>Explora por categoría o busca el nombre de un producto.</p>
+            </section>
+            <section class="container seccion pt-0">
+                <div class="row g-4">
+                    <aside class="col-lg-3 filtros">
+                        <h2>Encuentra tu producto</h2>
+                        <label for="buscar">Nombre del producto</label>
+                        <input id="buscar" class="form-control" type="search" placeholder="Ej. jabón" maxlength="80">
+                        <label for="categoria">Categoría</label>
+                        <select id="categoria" class="form-select">
+                            <option value="Todas">Todas las categorías</option>
+                            <option value="Cuidado personal">Cuidado personal</option>
+                            <option>Higiene</option>
+                            <option>Primeros auxilios</option>
+                        </select>
+                        <button id="limpiar" class="btn btn-outline-primary mt-3">Limpiar filtros</button>
+                    </aside>
+                    <div class="col-lg-9">
+                        <p id="resultados" role="status" aria-live="polite">12 productos en nuestro catálogo</p>
+                        <div class="row g-4 catalogo">
+                            <article class="col-sm-6 col-xl-4 producto" data-nombre="crema de manos" data-categoria="Cuidado personal">
+                                <div class="card h-100">
+                                    <img src="assets/img/crema.webp" class="card-img-top" alt="Crema de manos" width="1000" height="1000" loading="lazy">
+                                    <div class="card-body">
+                                        <p class="categoria">Cuidado personal</p>
+                                        <h3>Crema de manos</h3>
+                                        <p class="presentacion">50 ml</p>
+                                        <a class="ver-producto" href="producto.html?id=crema" aria-label="Ver detalles de Crema de manos">Ver detalles →</a>
+                                        <div class="precio-fila">
+                                            <strong>S/ 12.90</strong>
+                                            <button type="button" class="btn btn-primary agregar" data-producto="crema">Agregar al carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-sm-6 col-xl-4 producto" data-nombre="protector solar" data-categoria="Cuidado personal">
+                                <div class="card h-100">
+                                    <img src="assets/img/solar.webp" class="card-img-top" alt="Protector solar" width="1000" height="1000" loading="lazy">
+                                    <div class="card-body">
+                                        <p class="categoria">Cuidado personal</p>
+                                        <h3>Protector solar</h3>
+                                        <p class="presentacion">50 ml</p>
+                                        <a class="ver-producto" href="producto.html?id=solar" aria-label="Ver detalles de Protector solar">Ver detalles →</a>
+                                        <div class="precio-fila">
+                                            <strong>S/ 35.90</strong>
+                                            <button type="button" class="btn btn-primary agregar" data-producto="solar">Agregar al carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-sm-6 col-xl-4 producto" data-nombre="bálsamo labial" data-categoria="Cuidado personal">
+                                <div class="card h-100">
+                                    <img src="assets/img/labial.webp" class="card-img-top" alt="Bálsamo labial" width="960" height="960" loading="lazy">
+                                    <div class="card-body">
+                                        <p class="categoria">Cuidado personal</p>
+                                        <h3>Bálsamo labial</h3>
+                                        <p class="presentacion">4 g</p>
+                                        <a class="ver-producto" href="producto.html?id=labial" aria-label="Ver detalles de Bálsamo labial">Ver detalles →</a>
+                                        <div class="precio-fila">
+                                            <strong>S/ 8.50</strong>
+                                            <button type="button" class="btn btn-primary agregar" data-producto="labial">Agregar al carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-sm-6 col-xl-4 producto" data-nombre="loción corporal" data-categoria="Cuidado personal">
+                                <div class="card h-100">
+                                    <img src="assets/img/locion.webp" class="card-img-top" alt="Loción corporal" width="1000" height="1000" loading="lazy">
+                                    <div class="card-body">
+                                        <p class="categoria">Cuidado personal</p>
+                                        <h3>Loción corporal</h3>
+                                        <p class="presentacion">250 ml</p>
+                                        <a class="ver-producto" href="producto.html?id=locion" aria-label="Ver detalles de Loción corporal">Ver detalles →</a>
+                                        <div class="precio-fila">
+                                            <strong>S/ 22.90</strong>
+                                            <button type="button" class="btn btn-primary agregar" data-producto="locion">Agregar al carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-sm-6 col-xl-4 producto" data-nombre="jabón líquido" data-categoria="Higiene">
+                                <div class="card h-100">
+                                    <img src="assets/img/jabon.webp" class="card-img-top" alt="Jabón líquido" width="298" height="298" loading="lazy">
+                                    <div class="card-body">
+                                        <p class="categoria">Higiene</p>
+                                        <h3>Jabón líquido</h3>
+                                        <p class="presentacion">400 ml</p>
+                                        <a class="ver-producto" href="producto.html?id=jabon" aria-label="Ver detalles de Jabón líquido">Ver detalles →</a>
+                                        <div class="precio-fila">
+                                            <strong>S/ 10.90</strong>
+                                            <button type="button" class="btn btn-primary agregar" data-producto="jabon">Agregar al carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-sm-6 col-xl-4 producto" data-nombre="cepillo dental" data-categoria="Higiene">
+                                <div class="card h-100">
+                                    <img src="assets/img/cepillo.webp" class="card-img-top" alt="Cepillo dental" width="1000" height="1000" loading="lazy">
+                                    <div class="card-body">
+                                        <p class="categoria">Higiene</p>
+                                        <h3>Cepillo dental</h3>
+                                        <p class="presentacion">1 unidad</p>
+                                        <a class="ver-producto" href="producto.html?id=cepillo" aria-label="Ver detalles de Cepillo dental">Ver detalles →</a>
+                                        <div class="precio-fila">
+                                            <strong>S/ 7.50</strong>
+                                            <button type="button" class="btn btn-primary agregar" data-producto="cepillo">Agregar al carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-sm-6 col-xl-4 producto" data-nombre="pasta dental" data-categoria="Higiene">
+                                <div class="card h-100">
+                                    <img src="assets/img/pasta.webp" class="card-img-top" alt="Pasta dental" width="1000" height="1000" loading="lazy">
+                                    <div class="card-body">
+                                        <p class="categoria">Higiene</p>
+                                        <h3>Pasta dental</h3>
+                                        <p class="presentacion">90 g</p>
+                                        <a class="ver-producto" href="producto.html?id=pasta" aria-label="Ver detalles de Pasta dental">Ver detalles →</a>
+                                        <div class="precio-fila">
+                                            <strong>S/ 9.90</strong>
+                                            <button type="button" class="btn btn-primary agregar" data-producto="pasta">Agregar al carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-sm-6 col-xl-4 producto" data-nombre="hilo dental" data-categoria="Higiene">
+                                <div class="card h-100">
+                                    <img src="assets/img/hilo.webp" class="card-img-top" alt="Hilo dental" width="1000" height="1000" loading="lazy">
+                                    <div class="card-body">
+                                        <p class="categoria">Higiene</p>
+                                        <h3>Hilo dental</h3>
+                                        <p class="presentacion">50 m</p>
+                                        <a class="ver-producto" href="producto.html?id=hilo" aria-label="Ver detalles de Hilo dental">Ver detalles →</a>
+                                        <div class="precio-fila">
+                                            <strong>S/ 8.90</strong>
+                                            <button type="button" class="btn btn-primary agregar" data-producto="hilo">Agregar al carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-sm-6 col-xl-4 producto" data-nombre="gasas estériles" data-categoria="Primeros auxilios">
+                                <div class="card h-100">
+                                    <img src="assets/img/gasas.webp" class="card-img-top" alt="Gasas estériles" width="1000" height="1000" loading="lazy">
+                                    <div class="card-body">
+                                        <p class="categoria">Primeros auxilios</p>
+                                        <h3>Gasas estériles</h3>
+                                        <p class="presentacion">10 unidades</p>
+                                        <a class="ver-producto" href="producto.html?id=gasas" aria-label="Ver detalles de Gasas estériles">Ver detalles →</a>
+                                        <div class="precio-fila">
+                                            <strong>S/ 6.50</strong>
+                                            <button type="button" class="btn btn-primary agregar" data-producto="gasas">Agregar al carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-sm-6 col-xl-4 producto" data-nombre="vendas elásticas" data-categoria="Primeros auxilios">
+                                <div class="card h-100">
+                                    <img src="assets/img/vendas.webp" class="card-img-top" alt="Vendas elásticas" width="1000" height="1000" loading="lazy">
+                                    <div class="card-body">
+                                        <p class="categoria">Primeros auxilios</p>
+                                        <h3>Vendas elásticas</h3>
+                                        <p class="presentacion">1 unidad</p>
+                                        <a class="ver-producto" href="producto.html?id=vendas" aria-label="Ver detalles de Vendas elásticas">Ver detalles →</a>
+                                        <div class="precio-fila">
+                                            <strong>S/ 9.50</strong>
+                                            <button type="button" class="btn btn-primary agregar" data-producto="vendas">Agregar al carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-sm-6 col-xl-4 producto" data-nombre="apósitos adhesivos" data-categoria="Primeros auxilios">
+                                <div class="card h-100">
+                                    <img src="assets/img/apositos.webp" class="card-img-top" alt="Apósitos adhesivos" width="1000" height="1000" loading="lazy">
+                                    <div class="card-body">
+                                        <p class="categoria">Primeros auxilios</p>
+                                        <h3>Apósitos adhesivos</h3>
+                                        <p class="presentacion">20 unidades</p>
+                                        <a class="ver-producto" href="producto.html?id=apositos" aria-label="Ver detalles de Apósitos adhesivos">Ver detalles →</a>
+                                        <div class="precio-fila">
+                                            <strong>S/ 5.90</strong>
+                                            <button type="button" class="btn btn-primary agregar" data-producto="apositos">Agregar al carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-sm-6 col-xl-4 producto" data-nombre="cinta médica" data-categoria="Primeros auxilios">
+                                <div class="card h-100">
+                                    <img src="assets/img/cinta.webp" class="card-img-top" alt="Cinta médica" width="1000" height="1000" loading="lazy">
+                                    <div class="card-body">
+                                        <p class="categoria">Primeros auxilios</p>
+                                        <h3>Cinta médica</h3>
+                                        <p class="presentacion">1 rollo</p>
+                                        <a class="ver-producto" href="producto.html?id=cinta" aria-label="Ver detalles de Cinta médica">Ver detalles →</a>
+                                        <div class="precio-fila">
+                                            <strong>S/ 7.90</strong>
+                                            <button type="button" class="btn btn-primary agregar" data-producto="cinta">Agregar al carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <p id="sin-resultados" class="alert alert-light mt-4" hidden>No encontramos productos con esos filtros. Prueba otro nombre o limpia la búsqueda.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Pie de página -->
+        <footer>
+            <div class="container row mx-auto gy-4">
+                <div class="col-md-5">
+                    <a class="marca" href="index.html">
+                        <img class="logo" src="assets/img/logo.webp" alt="VIDAFARMA" width="379" height="358" loading="lazy">
+                    </a>
+                    <p>Cuidado cotidiano, información a tu alcance.</p>
+                    <small>Tu bienestar, nuestra prioridad.</small>
+                </div>
+                <div class="col-md-3">
+                    <h2>Explora</h2>
+                    <a href="productos.html">Nuestros productos</a>
+                    <a href="nosotros.html">Sobre nosotros</a>
+                    <a href="preguntas.html">Resuelve tus dudas</a>
+                </div>
+                <div class="col-md-4">
+                    <h2>Estamos para orientarte</h2>
+                    <p>Lunes a sábado · 8:00 a. m. a 9:00 p. m.</p>
+                    <a href="contacto.html">Ir a contacto →</a>
+                </div>
+            </div>
+            <div class="container cierre">© 2026 VIDAFARMA · Cuidado y bienestar</div>
+        </footer>
+        <div id="aviso-carrito" class="aviso-carrito" role="status" aria-live="polite"></div>
+    </body>
+</html>

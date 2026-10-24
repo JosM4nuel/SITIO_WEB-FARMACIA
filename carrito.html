@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="VIDAFARMA: catálogo de cuidado personal, higiene y primeros auxilios.">
+        <title>Tu carrito | VIDAFARMA</title>
+        <link rel="icon" href="assets/img/logo.webp" type="image/webp">
+        <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/estilos.css">
+        <!-- Java funciones generales, catálogo y carrito -->
+        <script src="assets/js/principal.js" defer></script>
+        <script src="assets/js/productos.js" defer></script>
+        <script src="assets/js/carrito.js" defer></script>
+    </head>
+    <body>
+        <a class="saltar" href="#contenido">Saltar al contenido</a>
+        <div class="barra-superior">
+            <div class="mensajes-barra">
+                <a href="https://wa.me/51946817139" target="_blank" rel="noopener">PEDIDOS POR WHATSAPP · 946 817 139</a>
+                <a href="productos.html">COMPRA POR CATEGORÍAS</a>
+                <a href="contacto.html">LUN–SÁB · 8:00 A. M. A 9:00 P. M.</a>
+            </div>
+        </div>
+        <!-- Encabezado y navegacion -->
+        <header>
+            <nav class="container navegacion" aria-label="Navegación principal">
+                <a class="marca" href="index.html">
+                    <img src="assets/img/logo.webp" alt="VIDAFARMA" class="logo" width="379" height="358">
+                </a>
+                <button type="button" id="boton-menu" class="boton-menu" aria-expanded="false" aria-controls="menu">Menú ☰</button>
+                <ul id="menu" class="menu">
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="productos.html">Productos</a>
+                    </li>
+                    <li>
+                        <a href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="preguntas.html">Preguntas frecuentes</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="carrito.html" class="enlace-carrito" aria-current="page">Carrito (<span class="cantidad-carrito">0</span>)</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Búsqueda rápida del catálogo -->
+            <div class="container barra-busqueda">
+                <form class="buscar-tienda" action="productos.html" method="get" role="search">
+                    <label class="visually-hidden" for="busqueda-tienda">Buscar en el catálogo</label>
+                    <input id="busqueda-tienda" name="q" type="search" placeholder="¿Qué producto estás buscando?" maxlength="80">
+                    <button type="submit">Buscar</button>
+                </form>
+                <a class="ayuda-tienda" href="preguntas.html">¿Necesitas ayuda? →</a>
+            </div>
+            <nav class="categorias-rapidas" aria-label="Categorías de productos">
+                <div class="container">
+                    <a href="productos.html">Todo el catálogo</a>
+                    <a href="productos.html#cuidado">Cuidado personal</a>
+                    <a href="productos.html#higiene">Higiene</a>
+                    <a href="productos.html#auxilios">Primeros auxilios</a>
+                </div>
+            </nav>
+        </header>
+        <!-- Contenido de la pagina -->
+        <main id="contenido">
+            <nav class="container ruta" aria-label="Ubicación en el sitio">
+                <a href="index.html">Inicio</a> <span aria-hidden="true">/</span> <span aria-current="page">Tu carrito</span>
+            </nav>
+            <section class="container cabecera">
+                <p class="etiqueta">TU SELECCION</p>
+                <h1>Tu carrito.</h1>
+                <p>Revisa tus productos y elige las cantidades que necesitas.</p>
+            </section>
+            <section class="container seccion pt-0">
+                <div id="compra-finalizada" class="confirmacion-compra" hidden role="status"></div>
+                <div id="carrito-vacio" class="carrito-vacio" hidden>
+                    <h2>Tu carrito está vacio</h2>
+                    <p>Descubre nuestros productos y agrega tus favoritos.</p>
+                    <a href="productos.html" class="btn btn-primary">Explorar productos →</a>
+                </div>
+                <div id="contenido-carrito" class="row g-4">
+                    <div class="col-lg-8">
+                        <div id="lista-carrito"></div>
+                        <button id="vaciar-carrito" class="btn btn-outline-primary mt-3" type="button">Vaciar carrito</button>
+                        <a href="productos.html" class="seguir-comprando">Seguir comprando →</a>
+                    </div>
+                    <aside class="col-lg-4">
+                        <div class="resumen-carrito">
+                            <h2>Resumen de compra</h2>
+                            <p class="fila-total"><span>Unidades</span><strong id="total-unidades">0</strong></p>
+                            <p class="fila-total total"><span>Total</span><strong id="total-precio">S/ 0.00</strong></p>
+                            <button id="finalizar-compra" class="btn btn-primary w-100" type="button">Finalizar compra →</button>
+                            <p class="nota mt-3">Elige Yape, Plin, tarjeta o prepara tu pedido por WhatsApp.</p>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+            <dialog id="confirmar-compra" class="ventana-compra" aria-labelledby="titulo-pago">
+                <h2 id="titulo-pago">Completa tu compra</h2>
+                <p id="introduccion-whatsapp" hidden>Estás a un paso de completar tu compra.</p>
+                <p id="detalle-confirmacion"></p>
+                <form id="formulario-pago">
+                    <fieldset class="metodos-pago">
+                        <legend>Elige cómo continuar</legend>
+                        <label><input type="radio" name="metodo" value="Yape" checked> Yape</label>
+                        <label><input type="radio" name="metodo" value="Plin"> Plin</label>
+                        <label><input type="radio" name="metodo" value="Tarjeta"> Tarjeta · Próximamente</label>
+                        <label><input type="radio" name="metodo" value="WhatsApp"> WhatsApp</label>
+                    </fieldset>
+                    <div id="datos-pago" class="datos-pago">
+                        <p id="instruccion-pago"></p>
+                        <p id="titular-pago">Titular: <strong>JOSE MANUEL PACHERRE ALAMA</strong></p>
+                        
+                    </div>
+                    <p id="estado-pago" role="status" aria-live="polite"></p>
+                    <p id="gracias-whatsapp" class="nota" hidden>¡Gracias por confiar en VIDAFARMA!</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <button id="volver-pago" type="button" class="btn btn-outline-primary">Volver al carrito</button>
+                        <button id="procesar-pago" type="submit" class="btn btn-primary">Continuar con Yape</button>
+                        <a id="enlace-whatsapp" class="btn btn-primary" target="_blank" rel="noopener" hidden>Continúa por WhatsApp</a>
+                    </div>
+                </form>
+            </dialog>
+        </main>
+        <!-- Pie de pagina -->
+        <footer>
+            <div class="container row mx-auto gy-4">
+                <div class="col-md-5">
+                    <a class="marca" href="index.html">
+                        <img class="logo" src="assets/img/logo.webp" alt="VIDAFARMA" width="379" height="358" loading="lazy">
+                    </a>
+                    <p>Cuidado cotidiano, información a tu alcance.</p>
+                    <small>Tu bienestar, nuestra prioridad.</small>
+                </div>
+                <div class="col-md-3">
+                    <h2>Explora</h2>
+                    <a href="productos.html">Nuestros productos</a>
+                    <a href="nosotros.html">Sobre nosotros</a>
+                    <a href="preguntas.html">Resuelve tus dudas</a>
+                </div>
+                <div class="col-md-4">
+                    <h2>Estamos para orientarte</h2>
+                    <p>Lunes a sábado · 8:00 a. m. a 9:00 p. m.</p>
+                    <a href="contacto.html">Ir a contacto →</a>
+                </div>
+            </div>
+            <div class="container cierre">© 2026 VIDAFARMA · Cuidado y bienestar</div>
+        </footer>
+        <div id="aviso-carrito" class="aviso-carrito" role="status" aria-live="polite"></div>
+    </body>
+</html>
