@@ -216,7 +216,7 @@ if (finalizar) {
             const titulo = document.createElement('h2');
             titulo.textContent = 'Pago recibido';
             const aviso = document.createElement('p');
-            aviso.textContent = 'La demostración con ' + metodo + ' terminó correctamente. No se ha cobrado dinero ni enviado el pedido.';
+            aviso.textContent = 'La demostración con ' + metodo + ' terminó correctamente.';
             resultado.appendChild(titulo);
             resultado.appendChild(aviso);
             const lista = document.createElement('ul');
